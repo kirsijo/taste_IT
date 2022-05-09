@@ -1,13 +1,136 @@
-body {
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap");
+
+:root {
+  --darkgreen: #3b3f20;
+  --lightgreen: #e9f0ce;
+  --mediumgreen: #687339;
+  --lime: #cedd55;
+  --raspberry: #d45464;
+  --main-font: "Roboto Mono", monospace;
+}
+
+* {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+
+h1 {
+  font-family: "Roboto Mono", monospace;
+  font-size: 2rem;
+  padding: 15px;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  color: var(--lightgreen);
+  background-color: var(--darkgreen);
+}
+
+li {
+  display: inline-block;
+  margin: 1rem;
+  font-family: var(--main-font);
+}
+
+a {
+  text-decoration: none;
+  color: var(--lightgreen);
+  font-family: var(--main-font);
+}
+
+a:hover {
+  cursor: pointer;
+  color: #d45464;
+}
+
+#video {
+  width: 100%;
+  z-index: -1;
+  -webkit-filter: grayscale(75%);
+  -moz-filter: grayscale(75%);
+  -ms-filter: grayscale(75%);
+  -o-filter: grayscale(75%);
+  filter: grayscale(75%);
+}
+
+h2,
+p,
+button {
+  font-family: var(--main-font);
+}
+
+h2,
+p {
+  color: var(--darkgreen);
+  margin-bottom: 15px;
+}
+
+button {
+  background-color: #3b3f20;
+  color: var(--lightgreen);
+  padding: 10px;
+  border-style: none;
+  border-radius: 3px;
+  margin: 15px;
+  max-width: 100px;
+}
+
+.overlay-hero {
+  z-index: 1;
+  width: 100%;
+  margin-top: 200px;
+  padding: 10px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  justify-content: center;
+  background: rgba(255, 255, 255, 0.5);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(3px);
+  -webkit-backdrop-filter: blur(5px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.footer-header {
+  text-align: center;
+  background-color: #e9f0ce;
+  padding: 10px;
+}
+
+h3 {
+  color: #d45464;
+  font-family: var(--main-font);
+  margin-bottom: 10px;
+}
+
+.card-container {
+  margin: 15px;
+  display: flex;
+}
+
+.footer-card {
+  margin: 25px;
+  padding: 15px;
+  max-width: 300px;
+  border-style: solid;
+  border-width: 2px;
+  border-color: #cedd55;
+}
+
+.footer-card a {
+  color: #687339;
+}
+
+.footer-card a:hover {
+  color: #d45464;
 }
