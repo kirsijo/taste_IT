@@ -1,0 +1,17 @@
+{
+  "recipes": [
+    {
+      "id": 1,
+      "name": "Greek Salad",
+      "author": "Gorgeous Georgios",
+      "country": "Greece",
+      "description": "The cornerstone of my diet",
+      "image": "",
+      "ingredients": {
+        "quantity": "1l",
+        "ingredient": "olive oil"
+      },
+      "instruction": "mix all ingredients and serve immediately"
+    }
+  ]
+}

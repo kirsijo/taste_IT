@@ -134,3 +134,45 @@ h3 {
 .footer-card a:hover {
   color: #d45464;
 }
+
+/* RECIPE FORM*/
+
+.recipe-form {
+  display: flex;
+  max-width: 400px;
+  flex-direction: column;
+  align-content: center;
+  padding: 20px;
+  justify-content: center;
+}
+
+input[type="submit"] {
+  margin-top: 20px;
+  background-color: var(--lime);
+  text-transform: uppercase;
+  color: var(--raspberry);
+}
+
+input,
+textarea,
+select {
+  font-family: var(--main-font);
+  background: #f4f4f4;
+  border: 1px solid rgb(102, 102, 102);
+  width: 250px;
+  padding: 0.8rem;
+  border-radius: 5px;
+  font-size: 0.9rem;
+}
+
+select {
+  margin: 10px;
+  padding: 15px;
+  width: 280px;
+}
+
+label {
+  width: 150px;
+  display: inline-block;
+  font-family: var(--main-font);
+}

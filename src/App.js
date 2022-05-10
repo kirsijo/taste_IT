@@ -3,6 +3,7 @@ import React from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Home from "./components/Home";
 import RecipeList from "./components/RecipeList";
+import NewRecipeForm from "./components/NewRecipeForm";
 
 const App = () => {
   return (
@@ -11,6 +12,7 @@ const App = () => {
         <Routes>
           <Route index element={<Home />} />
           <Route path="recipes" element={<RecipeList />} />
+          <Route path="addnewrecipe" element={<NewRecipeForm />} />
         </Routes>
       </BrowserRouter>
     </>
