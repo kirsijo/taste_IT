@@ -15,6 +15,23 @@
         }
       ],
       "instructions": "mix all ingredients and serve immediately"
+    },
+    {
+      "name": "Sticky Toffee Pudding",
+      "author": "They call me M",
+      "country": "United Kingdom",
+      "description": "Delicious post-supper treat",
+      "image": "https://www.wearesovegan.com/wp-content/uploads/2021/09/veganultimatestickytoffeepuddingrecipeh1.jpg",
+      "ingredients": [
+        {
+          "id": 1,
+          "ingredient": "flour",
+          "quantity": "lots"
+        }
+      ],
+      "instructions": "Boil 'em, mash 'em stick 'em in a stew",
+      "flagURL": "https://flagcdn.com/w320/gb.png",
+      "id": 2
     }
   ]
 }

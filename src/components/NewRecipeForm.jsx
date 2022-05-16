@@ -13,6 +13,7 @@ const NewRecipeForm = () => {
     image: "",
     ingredients: [],
     instructions: "",
+    flagURL: "",
   });
 
   // ingredients have their own state
@@ -43,11 +44,18 @@ const NewRecipeForm = () => {
   }, []);
 
   const changeCountry = (e) => {
-    const correctCountry = countryData.find((c) => c.name === e.target.value);
-    setCountryData({ ...countryData, country: correctCountry.common });
+    const correctCountry = countryData.find((c) => {
+      return c.name.common === e.target.value;
+    });
+    console.log(correctCountry);
+    setFormData({
+      ...formData,
+      country: correctCountry.name.common,
+      flagURL: correctCountry.flags.png,
+    });
   };
 
-  /*INGREDIENT DATA */
+  /*INGREDIENT DATA AND ADDING INGREDIENTS */
 
   const changeIngrData = (e, i) => {
     const { name, value } = e.target;
@@ -55,6 +63,16 @@ const NewRecipeForm = () => {
     ingrList[i][name] = value;
     setIngredients(ingrList);
     setFormData({ ...formData, ingredients: ingredients });
+  };
+
+  const addMoreIngredients = (e) => {
+    e.preventDefault();
+    const newIngr = {
+      id: ingredients.length + 1,
+      ingredient: "",
+      quantity: "",
+    };
+    setIngredients([...ingredients, newIngr]);
   };
 
   return (
@@ -87,7 +105,7 @@ const NewRecipeForm = () => {
             onChange={changeCountry}
           >
             {countryData.map((country) => (
-              <option value="country">{country.name.common}</option>
+              <option value={country.name.common}>{country.name.common}</option>
             ))}
           </select>
           <label htmlFor="description"> Description</label>
@@ -129,6 +147,7 @@ const NewRecipeForm = () => {
               </div>
             );
           })}
+          <button onClick={addMoreIngredients}>Add more ingredients</button>
           <div>
             <label htmlFor="Instructions">Instructions</label>
             <input
