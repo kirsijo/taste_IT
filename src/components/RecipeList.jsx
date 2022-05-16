@@ -1,11 +1,29 @@
 import RecipeCard from "./RecipeCard";
-import React from "react";
+import Nav from "./Nav";
+import React, { useEffect } from "react";
 import { useState } from "react";
+import axios from "axios";
 
 const RecipeList = () => {
-  const [data, setData] = useState({});
+  const [data, setData] = useState([]);
 
-  return <div>RecipeList will be here</div>;
+  useEffect(() => {
+    axios
+      .get(`http://localhost:3010/recipes/`)
+      .then((res) => setData(res.data));
+  }, []);
+  return (
+    <>
+      <Nav />
+
+      <div className="recipe-cards-list">
+        {" "}
+        {data.map((c) => (
+          <RecipeCard name={c.name} key={c.id} image={c.image} id={c.id} />
+        ))}
+      </div>
+    </>
+  );
 };
 
 export default RecipeList;

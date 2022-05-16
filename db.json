@@ -6,12 +6,42 @@
       "author": "Gorgeous Georgios",
       "country": "Greece",
       "description": "The cornerstone of my diet",
-      "image": "",
-      "ingredients": {
-        "quantity": "1l",
-        "ingredient": "olive oil"
-      },
-      "instruction": "mix all ingredients and serve immediately"
+      "image": "https://www.simplyrecipes.com/thmb/au60mVTA5EPLLknjdtQ9BYO0OC4=/1067x1067/smart/filters:no_upscale()/__opt__aboutcom__coeus__resources__content_migration__simply_recipes__uploads__2011__08__dads-greek-salad-horiz-a-1600-bc71b85bc907414a9bb3179a923b58fc.jpg",
+      "ingredients": [
+        {
+          "quantity": "1l",
+          "ingredient": "olive oil"
+        }
+      ],
+      "instructions": "mix all ingredients and serve immediately"
+    },
+    {
+      "name": "Sticky Toffee Pudding",
+      "author": "James Bond",
+      "country": "United Kingdom",
+      "description": "Delicious post-supper treat",
+      "image": "https://www.wearesovegan.com/wp-content/uploads/2021/09/veganultimatestickytoffeepuddingrecipeh1.jpg",
+      "ingredient": "flour",
+      "quantity": "lots",
+      "instructions": "Boil 'em, mash 'em stick 'em in a stew",
+      "id": 10
+    },
+    {
+      "name": "Vegan Sticky Toffee Pudding",
+      "author": "James Bond",
+      "country": "country",
+      "description": "Delicious post-supper treat",
+      "image": "https://www.wearesovegan.com/wp-content/uploads/2021/09/veganultimatestickytoffeepuddingrecipeh1.jpg",
+      "ingredients": [
+        {
+          "ingredient": "",
+          "quantity": ""
+        }
+      ],
+      "instructions": "Boil 'em, mash 'em stick 'em in a stew",
+      "ingredient": "flour",
+      "quantity": "lots",
+      "id": 11
     }
   ]
 }
