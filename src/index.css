@@ -27,6 +27,9 @@ h1 {
 
 nav {
   display: flex;
+  position: fixed;
+  width: 100%;
+  z-index: 20;
   justify-content: space-between;
   color: var(--peas);
   background-color: var(--kale);
@@ -79,6 +82,7 @@ button {
   border-radius: 3px;
   margin: 15px;
   max-width: 150px;
+  max-height: 60px;
 }
 
 .overlay-hero {
@@ -94,10 +98,10 @@ button {
   flex-direction: column;
   align-items: left;
   justify-content: center;
-  background: rgba(255, 255, 255, 0.5);
+  background: rgba(255, 255, 255, 0.727);
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.6);
-  backdrop-filter: blur(3px);
-  -webkit-backdrop-filter: blur(5px);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
   border: 1px solid rgba(255, 255, 255, 0.3);
 }
 
@@ -138,9 +142,13 @@ h3 {
 /* RECIPE FORM*/
 
 .recipe-form {
-  display: flex;
   padding: 50px;
   margin: 20px;
+}
+
+.recipe-form form {
+  margin: 0 auto;
+  width: 350px;
 }
 
 input[type="submit"] {
@@ -156,17 +164,18 @@ select {
   font-family: var(--main-font);
   background: #f4f4f4;
   border: 1px solid rgb(102, 102, 102);
-  width: 250px;
+  width: 350px;
   padding: 0.8rem;
   margin: 10px;
   border-radius: 5px;
   font-size: 0.9rem;
+  outline: none;
 }
 
 select {
   margin: 10px;
   padding: 15px;
-  width: 280px;
+  width: 380px;
 }
 
 label {
@@ -175,6 +184,7 @@ label {
   width: 100%;
   display: inline-block;
   font-family: var(--main-font);
+  color: var(--avocado);
 }
 
 h3 {
@@ -182,8 +192,8 @@ h3 {
 }
 
 textarea {
-  width: 300px;
-  height: 300px;
+  width: 350px;
+  height: 200px;
   outline: none;
 }
 
@@ -191,6 +201,7 @@ textarea {
 
 .recipe-cards-list {
   display: flex;
+  flex-wrap: wrap;
 }
 
 .recipe-card {
@@ -228,7 +239,7 @@ img {
 
 .recipe-search-div {
   text-align: center;
-  margin: 20px;
+  padding-top: 150px;
 }
 
 .recipe-search {
