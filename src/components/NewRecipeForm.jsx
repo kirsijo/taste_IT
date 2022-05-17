@@ -47,16 +47,13 @@ const NewRecipeForm = () => {
     const correctCountry = countryData.find((c) => {
       return c.name.common === e.target.value;
     });
-    console.log(correctCountry);
+
     setFormData({
       ...formData,
       country: correctCountry.name.common,
       flagURL: correctCountry.flags.png,
     });
   };
-
-  const sortedCountryData = countryData.sort();
-  console.log(sortedCountryData);
 
   /*INGREDIENT DATA AND ADDING INGREDIENTS */
 
