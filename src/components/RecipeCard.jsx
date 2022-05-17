@@ -9,7 +9,7 @@ const RecipeCard = (props) => {
       <img src={props.image} alt={props.name} />
       <h3>{props.name}</h3>
       <div className="flag-div">
-        {/* <img src={country.flag} alt={country.name} /> */}
+        <img src={props.flagURL} alt={props.country} />
       </div>
       <Link to={`${props.id}`}>See more</Link>
     </div>

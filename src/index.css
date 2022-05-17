@@ -177,7 +177,7 @@ label {
   font-family: var(--main-font);
 }
 
-/* RECIPE CARDS */
+/* RECIPE LIST */
 
 .recipe-card {
   display: flex;
@@ -189,6 +189,7 @@ label {
   box-shadow: 0 0 5px rgb(92, 92, 92);
   border-radius: 5px;
   background: white;
+  position: relative;
 }
 
 img {
@@ -200,6 +201,17 @@ img {
   color: #3b3f20;
 }
 
+.flag-div {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.flag-div img {
+  height: 50px;
+  width: 100px;
+}
+
 /*INDIVIDUAL RECIPE */
 
 .individual-recipe {
@@ -207,4 +219,13 @@ img {
   margin: 50px;
   padding: 25px;
   box-shadow: 0 0 5px rgb(92, 92, 92);
+  position: relative;
+}
+
+.flag-container img {
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 50px;
+  width: 100px;
 }

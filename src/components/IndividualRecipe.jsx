@@ -11,6 +11,7 @@ const IndividualRecipe = (props) => {
     description: "",
     ingredients: [],
     instructions: "",
+    flagURL: "",
   });
   const [isLoading, setLoading] = useState(false);
 
@@ -24,6 +25,9 @@ const IndividualRecipe = (props) => {
     <>
       <Nav />
       <div className="individual-recipe">
+        <div className="flag-container">
+          <img src={data.flagURL} alt={data.country} />
+        </div>
         <h3>{data.name}</h3>
         <img src={data.image} alt={data.name} />
         <div className="recipe-details">
@@ -38,7 +42,7 @@ const IndividualRecipe = (props) => {
             <h3>Ingredients</h3>
             {data.ingredients.map((p) => (
               <p>
-                {p.ingredient} {p.quantity}
+                {p.ingredient} | {p.quantity}
               </p>
             ))}
 

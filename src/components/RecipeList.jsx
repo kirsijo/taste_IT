@@ -19,7 +19,13 @@ const RecipeList = () => {
       <div className="recipe-cards-list">
         {" "}
         {data.map((c) => (
-          <RecipeCard name={c.name} key={c.id} image={c.image} id={c.id} />
+          <RecipeCard
+            name={c.name}
+            key={c.id}
+            image={c.image}
+            id={c.id}
+            flagURL={c.flagURL}
+          />
         ))}
       </div>
     </>
