@@ -17,12 +17,14 @@ const Footer = () => {
         <div className="footer-card">
           <h3>Add recipes</h3>
           <p>Missing a recipe from your country? Click here to add one!</p>
-          <Link to="addnewrecipe">Add recipe</Link>
+          <Link to="/addnewrecipe">Add recipe</Link>
         </div>
         <div className="footer-card">
           <h3>Want to know more about this project?</h3>
           <p>Visit our programme homepage.</p>
-          <Link to="">Business College Helsinki</Link>
+          <a href="https://bc.fi" target="_blank">
+            Business College Helsinki
+          </a>
         </div>
       </div>
     </footer>

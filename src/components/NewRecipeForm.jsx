@@ -55,6 +55,9 @@ const NewRecipeForm = () => {
     });
   };
 
+  const sortedCountryData = countryData.sort();
+  console.log(sortedCountryData);
+
   /*INGREDIENT DATA AND ADDING INGREDIENTS */
 
   const changeIngrData = (e, i) => {
@@ -78,51 +81,67 @@ const NewRecipeForm = () => {
   return (
     <>
       <Nav />
+      <h1>Add new recipe</h1>
       <div className="recipe-form">
-        <h1>Add new recipe</h1>
         <form onSubmit={submitHandler}>
-          <label htmlFor="name">Name</label>
-          <input
-            type="text"
-            name="name"
-            id="name"
-            required
-            onChange={formUpdateHandler}
-          />
-          <label htmlFor="author">Author</label>
-          <input
-            type="text"
-            name="author"
-            id="author"
-            required
-            onChange={formUpdateHandler}
-          />
-          <label htmlFor="country">Recipe is from</label>
-          <select
-            type="text"
-            name="country"
-            id="country"
-            onChange={changeCountry}
-          >
-            {countryData.map((country) => (
-              <option value={country.name.common}>{country.name.common}</option>
-            ))}
-          </select>
-          <label htmlFor="description"> Description</label>
-          <input
-            type="textarea"
-            name="description"
-            id="description"
-            onChange={formUpdateHandler}
-          />
-          <label htmlFor="image">Image</label>
-          <input
-            type="url"
-            name="image"
-            id="image"
-            onChange={formUpdateHandler}
-          />
-          <h2>Ingredients</h2>
+          <div>
+            <label htmlFor="name">Name</label>
+            <input
+              type="text"
+              name="name"
+              id="name"
+              required
+              onChange={formUpdateHandler}
+            />
+          </div>
+          <div>
+            <label htmlFor="author">Author</label>
+            <input
+              type="text"
+              name="author"
+              id="author"
+              required
+              onChange={formUpdateHandler}
+            />
+          </div>
+          <div>
+            <label htmlFor="country">Recipe is from</label>
+            <select
+              type="text"
+              name="country"
+              id="country"
+              onChange={changeCountry}
+            >
+              {countryData
+                .sort((a, b) => {
+                  return a.name.common.localeCompare(b.name.common);
+                })
+                .map((country) => (
+                  <option value={country.name.common}>
+                    {country.name.common}
+                  </option>
+                ))}
+            </select>
+          </div>
+          <div>
+            <label htmlFor="description"> Description</label>
+            <input
+              type="textarea"
+              name="description"
+              id="description"
+              onChange={formUpdateHandler}
+            />
+          </div>
+          <div>
+            <label htmlFor="image">Image</label>
+            <input
+              type="url"
+              name="image"
+              id="image"
+              onChange={formUpdateHandler}
+            />
+          </div>
+          <h3>Ingredients</h3>
           {ingredients.map((_, i) => {
             return (
               <div key={i}>
@@ -150,7 +169,8 @@ const NewRecipeForm = () => {
           <button onClick={addMoreIngredients}>Add more ingredients</button>
           <div>
             <label htmlFor="Instructions">Instructions</label>
-            <input
+            <textarea
+              className="instructions"
               type="text"
               name="instructions"
               id="instructions"

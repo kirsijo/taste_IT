@@ -1,9 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap");
 
 :root {
-  --darkgreen: #3b3f20;
-  --lightgreen: #e9f0ce;
-  --mediumgreen: #687339;
+  --kale: #3b3f20;
+  --peas: #e9f0ce;
+  --avocado: #687339;
   --lime: #cedd55;
   --raspberry: #d45464;
   --main-font: "Roboto Mono", monospace;
@@ -28,8 +28,8 @@ h1 {
 nav {
   display: flex;
   justify-content: space-between;
-  color: var(--lightgreen);
-  background-color: var(--darkgreen);
+  color: var(--peas);
+  background-color: var(--kale);
 }
 
 li {
@@ -40,13 +40,13 @@ li {
 
 a {
   text-decoration: none;
-  color: var(--lightgreen);
+  color: var(--peas);
   font-family: var(--main-font);
 }
 
 a:hover {
   cursor: pointer;
-  color: #d45464;
+  color: var(--raspberry);
 }
 
 #video {
@@ -67,18 +67,18 @@ button {
 
 h2,
 p {
-  color: var(--darkgreen);
+  color: var(--kale);
   margin-bottom: 15px;
 }
 
 button {
-  background-color: #3b3f20;
-  color: var(--lightgreen);
+  background-color: var(--kale);
+  color: var(--peas);
   padding: 10px;
   border-style: none;
   border-radius: 3px;
   margin: 15px;
-  max-width: 100px;
+  max-width: 150px;
 }
 
 .overlay-hero {
@@ -103,12 +103,12 @@ button {
 
 .footer-header {
   text-align: center;
-  background-color: #e9f0ce;
+  background-color: var(--peas);
   padding: 10px;
 }
 
 h3 {
-  color: #d45464;
+  color: var(--raspberry);
   font-family: var(--main-font);
   margin-bottom: 10px;
 }
@@ -124,26 +124,23 @@ h3 {
   max-width: 300px;
   border-style: solid;
   border-width: 2px;
-  border-color: #cedd55;
+  border-color: var(--lime);
 }
 
 .footer-card a {
-  color: #687339;
+  color: var(--avocado);
 }
 
 .footer-card a:hover {
-  color: #d45464;
+  color: var(--raspberry);
 }
 
 /* RECIPE FORM*/
 
 .recipe-form {
   display: flex;
-  max-width: 400px;
-  flex-direction: column;
-  align-content: center;
-  padding: 20px;
-  justify-content: center;
+  padding: 50px;
+  margin: 20px;
 }
 
 input[type="submit"] {
@@ -161,6 +158,7 @@ select {
   border: 1px solid rgb(102, 102, 102);
   width: 250px;
   padding: 0.8rem;
+  margin: 10px;
   border-radius: 5px;
   font-size: 0.9rem;
 }
@@ -172,12 +170,28 @@ select {
 }
 
 label {
+  margin: 10px;
   width: 150px;
+  width: 100%;
   display: inline-block;
   font-family: var(--main-font);
 }
 
+h3 {
+  margin-top: 15px;
+}
+
+textarea {
+  width: 300px;
+  height: 300px;
+  outline: none;
+}
+
 /* RECIPE LIST */
+
+.recipe-cards-list {
+  display: flex;
+}
 
 .recipe-card {
   display: flex;
@@ -185,7 +199,7 @@ label {
   text-align: center;
   padding: 20px;
   margin: 20px;
-  max-width: 250px;
+  min-width: 250px;
   box-shadow: 0 0 5px rgb(92, 92, 92);
   border-radius: 5px;
   background: white;
@@ -198,7 +212,7 @@ img {
 }
 
 .recipe-card a {
-  color: #3b3f20;
+  color: var(--avocado);
 }
 
 .flag-div {
@@ -210,6 +224,21 @@ img {
 .flag-div img {
   height: 50px;
   width: 100px;
+}
+
+.recipe-search-div {
+  text-align: center;
+  margin: 20px;
+}
+
+.recipe-search {
+  width: 400px;
+  background-color: white;
+}
+
+.recipe-search::placeholder {
+  color: var(--avocado);
+  opacity: 1;
 }
 
 /*INDIVIDUAL RECIPE */
