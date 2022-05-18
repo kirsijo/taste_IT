@@ -1,12 +1,13 @@
 import React from "react";
 import food from "../video/food.mp4";
 import { useRef, useEffect } from "react";
+import { Link } from "react-router-dom";
 
 function HeroBanner() {
   const videoRef = useRef();
 
   useEffect(() => {
-    videoRef.current.playbackRate = 0.3;
+    videoRef.current.playbackRate = 0.4;
   }, []);
 
   return (
@@ -20,7 +21,10 @@ function HeroBanner() {
           <p>
             TasteIT is recipe app which is made in REACT22K group React lessons
           </p>
-          <button>Browse recipes</button>
+          <Link to="/recipes">
+            {" "}
+            <button type="button">Browse recipes</button>
+          </Link>
         </div>
       </div>
     </header>

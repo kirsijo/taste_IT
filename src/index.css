@@ -28,6 +28,9 @@ h1 {
 nav {
   display: flex;
   position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
   width: 100%;
   z-index: 20;
   justify-content: space-between;
@@ -198,6 +201,10 @@ textarea {
 }
 
 /* RECIPE LIST */
+.our-recipes {
+  text-align: center;
+  margin-bottom: 60px;
+}
 
 .recipe-cards-list {
   display: flex;
@@ -208,13 +215,13 @@ textarea {
   display: flex;
   flex-direction: column;
   text-align: center;
-  padding: 20px;
-  margin: 20px;
+  margin: 0 auto;
   min-width: 250px;
   box-shadow: 0 0 5px rgb(92, 92, 92);
   border-radius: 5px;
   background: white;
   position: relative;
+  padding: 20px;
 }
 
 img {
@@ -240,6 +247,8 @@ img {
 .recipe-search-div {
   text-align: center;
   padding-top: 150px;
+  padding-bottom: 50px;
+  margin: 0 auto;
 }
 
 .recipe-search {
@@ -256,7 +265,9 @@ img {
 
 .individual-recipe {
   text-align: center;
-  margin: 50px;
+  margin: 150px;
+  align-self: center;
+  max-width: 400px;
   padding: 25px;
   box-shadow: 0 0 5px rgb(92, 92, 92);
   position: relative;

@@ -7,7 +7,7 @@ import axios from "axios";
 const RecipeList = () => {
   const [data, setData] = useState([]);
   const [search, setSearch] = useState("");
-  const [results, setResults] = useState("");
+  const [loading, isLoading] = useState(false);
 
   useEffect(() => {
     axios
@@ -35,7 +35,7 @@ const RecipeList = () => {
           onChange={searchHandler}
         />
       </div>
-      <h2>Our recipes</h2>
+      <h2 className="our-recipes">Our recipes</h2>
       <div className="recipe-cards-list">
         {searchFilter.map((c) => (
           <RecipeCard
