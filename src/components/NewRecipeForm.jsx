@@ -30,10 +30,24 @@ const NewRecipeForm = () => {
 
   const submitHandler = (e) => {
     e.preventDefault();
-    axios
-      .post("http://localhost:3010/recipes", formData)
-      .then((res) => console.log("res", res));
-    setSubmit(true);
+    axios.post("http://localhost:3010/recipes", formData).then((res) => {
+      setSubmit(true);
+      setFormData({
+        name: "",
+        author: "",
+        description: "",
+        instructions: "",
+        flagURL: "",
+        country: "",
+        image: "",
+      });
+      setIngredients([
+        {
+          ingredient: "",
+          quantity: "",
+        },
+      ]);
+    });
   };
 
   /* get country data and country change handler*/
@@ -88,6 +102,7 @@ const NewRecipeForm = () => {
               type="text"
               name="name"
               id="name"
+              value={formData.name}
               required
               onChange={formUpdateHandler}
             />
@@ -98,6 +113,7 @@ const NewRecipeForm = () => {
               type="text"
               name="author"
               id="author"
+              value={formData.author}
               required
               onChange={formUpdateHandler}
             />
@@ -108,6 +124,7 @@ const NewRecipeForm = () => {
               type="text"
               name="country"
               id="country"
+              value={formData.country}
               onChange={changeCountry}
             >
               <option defaultValue="Choose country">Choose country</option>
@@ -128,6 +145,7 @@ const NewRecipeForm = () => {
               type="textarea"
               name="description"
               id="description"
+              value={formData.description}
               onChange={formUpdateHandler}
             />
           </div>
@@ -137,6 +155,7 @@ const NewRecipeForm = () => {
               type="url"
               name="image"
               id="image"
+              value={formData.image}
               onChange={formUpdateHandler}
             />
           </div>
@@ -177,6 +196,7 @@ const NewRecipeForm = () => {
               type="text"
               name="instructions"
               id="instructions"
+              value={formData.instructions}
               onChange={formUpdateHandler}
             />
             <input type="submit" value="send" />
