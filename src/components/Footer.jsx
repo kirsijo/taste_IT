@@ -11,7 +11,7 @@ const Footer = () => {
       <div className="card-container">
         <div className="footer-card">
           <h3>Browse recipes</h3>
-          <p>Find your favourites in your collection</p>
+          <p>Find your favourites in our collection</p>
           <Link to="/recipes">All recipes</Link>
         </div>
         <div className="footer-card">

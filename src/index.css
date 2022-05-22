@@ -58,11 +58,11 @@ a:hover {
 #video {
   width: 100%;
   z-index: -1;
-  -webkit-filter: grayscale(75%);
-  -moz-filter: grayscale(75%);
-  -ms-filter: grayscale(75%);
-  -o-filter: grayscale(75%);
-  filter: grayscale(75%);
+  -webkit-filter: grayscale(70%);
+  -moz-filter: grayscale(70%);
+  -ms-filter: grayscale(70%);
+  -o-filter: grayscale(70%);
+  filter: grayscale(70%);
 }
 
 h2,
@@ -146,6 +146,12 @@ h3 {
 
 /* RECIPE FORM*/
 
+.add-new-header {
+  margin-top: 150px;
+  color: var(--raspberry);
+  text-align: center;
+}
+
 .recipe-form {
   padding: 50px;
   margin: 20px;
@@ -163,6 +169,10 @@ input[type="submit"] {
   color: var(--raspberry);
 }
 
+input[type="submit"]:hover {
+  cursor: pointer;
+}
+
 input,
 textarea,
 select {
@@ -175,6 +185,15 @@ select {
   border-radius: 5px;
   font-size: 0.9rem;
   outline: none;
+}
+
+.ingredient,
+.quantity {
+  width: 150px;
+}
+
+.ingredient-container {
+  display: flex;
 }
 
 select {
@@ -200,6 +219,10 @@ textarea {
   width: 350px;
   height: 200px;
   outline: none;
+}
+
+.submit-form:hover {
+  cursor: pointer;
 }
 
 /* RECIPE LIST */

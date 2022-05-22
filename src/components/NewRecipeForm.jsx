@@ -5,6 +5,7 @@ import { useEffect, useState } from "react";
 
 const NewRecipeForm = () => {
   const [countryData, setCountryData] = useState([]);
+  const [submitted, setSubmit] = useState(false);
   const [formData, setFormData] = useState({
     name: "",
     author: "",
@@ -29,10 +30,10 @@ const NewRecipeForm = () => {
 
   const submitHandler = (e) => {
     e.preventDefault();
-    console.log(formData);
     axios
       .post("http://localhost:3010/recipes", formData)
       .then((res) => console.log("res", res));
+    setSubmit(true);
   };
 
   /* get country data and country change handler*/
@@ -78,7 +79,7 @@ const NewRecipeForm = () => {
   return (
     <>
       <Nav />
-      <h1>Add new recipe</h1>
+      <h1 className="add-new-header">Add new recipe</h1>
       <div className="recipe-form">
         <form onSubmit={submitHandler}>
           <div>
@@ -140,12 +141,14 @@ const NewRecipeForm = () => {
             />
           </div>
           <h3>Ingredients</h3>
+
           {ingredients.map((_, i) => {
             return (
-              <div key={i}>
+              <div className="ingredient-container" key={i}>
                 <div>
                   <label htmlFor="ingredient">Ingredient</label>
                   <input
+                    className="ingredient"
                     type="text"
                     name="ingredient"
                     id="ingredient"
@@ -155,6 +158,7 @@ const NewRecipeForm = () => {
                 <div>
                   <label htmlFor="quantity">Quantity</label>
                   <input
+                    className="quantity"
                     type="text"
                     name="quantity"
                     id="quantity"
@@ -176,6 +180,7 @@ const NewRecipeForm = () => {
               onChange={formUpdateHandler}
             />
             <input type="submit" value="send" />
+            {submitted === true && <h3>Thank you for your recipe!</h3>}
           </div>
         </form>
       </div>
