@@ -33,6 +33,48 @@
       "instructions": "mix all ingredients and serve immediately",
       "flagURL": "https://flagcdn.com/w320/gr.png",
       "id": 3
+    },
+    {
+      "name": "Lefse ",
+      "author": "Gunnar",
+      "country": "Norway",
+      "description": "Norwegian Potato Flatbread ",
+      "image": "https://images.food52.com/JUnhZov2ixqSvYZqlcr68Gq_vis=/1200x900/f31cfc5d-a4c9-4e83-ba17-b40cc739643f--lefse_bfast_1.jpg",
+      "ingredients": [
+        {
+          "id": 1,
+          "ingredient": "potatoes (peeled and cooked)",
+          "quantity": "269g (or 1 3/4 cups)"
+        },
+        {
+          "id": 2,
+          "ingredient": "all-purpose flour ",
+          "quantity": "53"
+        },
+        {
+          "id": 3,
+          "ingredient": "butter",
+          "quantity": "2 tbs"
+        },
+        {
+          "id": 4,
+          "ingredient": "milk or heavy cream",
+          "quantity": "2 tbs"
+        },
+        {
+          "id": 5,
+          "ingredient": "salt",
+          "quantity": "1 tsp"
+        },
+        {
+          "id": 6,
+          "ingredient": "granulated sugar",
+          "quantity": "1 tsp"
+        }
+      ],
+      "instructions": "Divide the dough into 12 pieces.\nGently roll it into a ball, then place it on a well-floured work surface. Pat into a circle.\n\nPlace the lefse onto the griddle or into the skillet. Cook on one side until speckled with brown spots; this should take about a minute. Flip and repeat.\n\nServe warm or at room temperature, spread with softened butter and rolled into a cylinder or folded into quarters. Add sugar or cinnamon sugar for a sweet treat.\n\n",
+      "flagURL": "https://flagcdn.com/w320/no.png",
+      "id": 4
     }
   ]
 }

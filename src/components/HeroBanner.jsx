@@ -19,11 +19,12 @@ function HeroBanner() {
         <div className="overlay-hero">
           <h2>TasteIT</h2>
           <p>
-            TasteIT is recipe app which is made in REACT22K group React lessons
+            TasteIT is a recipe app made in REACT22K group React lessons at BC
+            Helsinki.
           </p>
-          <Link to="/recipes">
+          <Link className="hero-button" to="/recipes">
             {" "}
-            <button type="button">Browse recipes</button>
+            Browse recipes
           </Link>
         </div>
       </div>

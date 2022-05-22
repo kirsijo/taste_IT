@@ -10,9 +10,11 @@ const RecipeList = () => {
   const [loading, isLoading] = useState(false);
 
   useEffect(() => {
-    axios
-      .get(`http://localhost:3010/recipes/`)
-      .then((res) => setData(res.data));
+    isLoading(true);
+    axios.get(`http://localhost:3010/recipes/`).then((res) => {
+      setData(res.data);
+      isLoading(false);
+    });
   }, []);
 
   const searchHandler = (e) => {
@@ -22,6 +24,10 @@ const RecipeList = () => {
   const searchFilter = data.filter((recipe) => {
     return recipe.name.toLowerCase().includes(search.toLowerCase());
   });
+
+  if (loading) {
+    return <p className="loading">Loading...</p>;
+  }
 
   return (
     <>

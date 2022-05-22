@@ -109,6 +109,9 @@ const NewRecipeForm = () => {
               id="country"
               onChange={changeCountry}
             >
+              <option selected disabled>
+                Choose country
+              </option>
               {countryData
                 .sort((a, b) => {
                   return a.name.common.localeCompare(b.name.common);
