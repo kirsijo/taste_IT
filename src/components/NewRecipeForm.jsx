@@ -109,15 +109,13 @@ const NewRecipeForm = () => {
               id="country"
               onChange={changeCountry}
             >
-              <option selected disabled>
-                Choose country
-              </option>
+              <option defaultValue="Choose country">Choose country</option>
               {countryData
                 .sort((a, b) => {
                   return a.name.common.localeCompare(b.name.common);
                 })
-                .map((country) => (
-                  <option value={country.name.common}>
+                .map((country, i) => (
+                  <option key={i} value={country.name.common}>
                     {country.name.common}
                   </option>
                 ))}
