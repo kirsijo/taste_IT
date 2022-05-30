@@ -4,17 +4,27 @@
 
 ### Project requirements
 
--Creation of a recipe app <br/>
--Must include a video hero banner <br/>
--Use of function components <br/>
--Use of separated components using props <br/>
--Use of eventhandlers (OnClick, OnChange) <br/>
--Conditional rendering <br/>
--List & Keys <br/>
--Forms <br/>
--Routing <br/>
--GET and POST to database (json server) <br/>
+- Creation of a recipe app
+- Must include a video hero banner
+- Use of function components
+- Use of separated components using props
+- Use of eventhandlers (OnClick, OnChange)
+- Conditional rendering
+- List & Keys
+- Form
+- Routing
+- GET and POST to database (json server)
 
-Packages used: <br/>
--axios<br/>
--react-router-dom
+Packages used:
+
+- axios
+- react-router-dom
+- json server
+
+### To run this project:
+
+```
+npm install
+npm start
+npm run server
+```
